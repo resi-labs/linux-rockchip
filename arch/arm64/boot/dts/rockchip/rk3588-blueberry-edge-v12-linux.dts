@@ -118,3 +118,8 @@
 		<0x4d KEY_POWER>;     //power (for 2.4g)
 	};
 };
+
+/* watchdog */
+&wdt {
+	status = "okay";
+};

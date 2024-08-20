@@ -35,26 +35,6 @@
 
 	};
 
-	dp0_sound: dp0-sound {
-		status = "disabled";
-		compatible = "rockchip,hdmi";
-		rockchip,card-name= "rockchip,dp0";
-		rockchip,mclk-fs = <512>;
-		rockchip,cpu = <&spdif_tx2>;
-		rockchip,codec = <&dp0 1>;
-		rockchip,jack-det;
-	};
-
-	dp1_sound: dp1-sound {
-		status = "disabled";
-		compatible = "rockchip,hdmi";
-		rockchip,card-name= "rockchip,dp1";
-		rockchip,mclk-fs = <512>;
-		rockchip,cpu = <&spdif_tx5>;
-		rockchip,codec = <&dp1 1>;
-		rockchip,jack-det;
-	};
-
 	hdmi0_sound: hdmi0-sound {
 		status = "disabled";
 		compatible = "rockchip,hdmi";
@@ -75,12 +55,37 @@
 		rockchip,jack-det;
 	};
 
+	dp0_sound: dp0-sound {
+		status = "disabled";
+		compatible = "rockchip,hdmi";
+		rockchip,card-name= "rockchip,dp0";
+		rockchip,mclk-fs = <512>;
+		rockchip,cpu = <&spdif_tx2>;
+		rockchip,codec = <&dp0 1>;
+		rockchip,jack-det;
+	};
+
+	dp1_sound: dp1-sound {
+		status = "disabled";
+		compatible = "rockchip,hdmi";
+		rockchip,card-name= "rockchip,dp1";
+		rockchip,mclk-fs = <512>;
+		rockchip,cpu = <&spdif_tx5>;
+		rockchip,codec = <&dp1 1>;
+		rockchip,jack-det;
+	};
+
+
 	test-power {
 		status = "okay";
 	};
 };
 
 &av1d_mmu {
+	status = "okay";
+};
+
+&avsd {
 	status = "okay";
 };
 
